@@ -3,29 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-function Clock(props) {
-  return (
-    <div>
-      <h1>Hello, world!</h1>
-      <h2>It is {props.date.toLocaleTimeString()}</h2>
-    </div>
-  )
-}
+import Clock from './clock';
 
 
-
-function tick() {
-  ReactDOM.render(
+ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-  <Clock date={new Date()} />
+  <Clock />
   </React.StrictMode>,
   document.getElementById('root')
 );
-}
-
-setInterval(tick, 1000);
 
 
 
